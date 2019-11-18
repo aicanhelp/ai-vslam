@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/openvslam" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/openvslam/googletest-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/build/DBoW2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/build/DBoW2/g2o" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/build/DBoW2/g2o/socket.io-client-cpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/build/DBoW2/g2o/socket.io-client-cpp/lib/websocketpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/build/Pangolin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/build/socket.io-client-cpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/build/socket.io-client-cpp/lib/asio" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/build/socket.io-client-cpp/lib/catch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/build/socket.io-client-cpp/lib/rapidjson" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/build/socket.io-client-cpp/lib/websocketpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/setup_temp/DBoW2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/setup_temp/DBoW2/g2o" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/setup_temp/DBoW2/g2o/socket.io-client-cpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/setup_temp/DBoW2/g2o/socket.io-client-cpp/lib/websocketpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/setup_temp/socket.io-client-cpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/setup_temp/socket.io-client-cpp/lib/asio" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/setup_temp/socket.io-client-cpp/lib/catch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/setup_temp/socket.io-client-cpp/lib/rapidjson" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/setup_temp/socket.io-client-cpp/lib/websocketpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/slambook" vcs="Git" />
+  </component>
+</project>

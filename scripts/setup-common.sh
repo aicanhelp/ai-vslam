@@ -3,8 +3,8 @@
 CUR_DIR=`pwd`
 trap "cd ${CUR_DIR}" 2 3 4 9 15
 #set -x -u -e
-WORK_DIR=${CUR_DIR}/setup_temp
-OPENVSLAM_DIR=../../openvslam
+WORK_DIR=${CUR_DIR}/build
+OPENVSLAM_DIR=../openvslam
 ! test -e ${WORK_DIR} && mkdir ${WORK_DIR}
 
 
