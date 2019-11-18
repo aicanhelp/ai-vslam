@@ -1,0 +1,6 @@
+[submodule "openvslam"]
+	path = openvslam
+	url = https://github.com/xdspacelab/openvslam.git
+[submodule "slambook"]
+	path = slambook
+	url = https://github.com/gaoxiang12/slambook.git
