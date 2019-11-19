@@ -4,7 +4,8 @@ source ./setup-common.sh
 function build_vslam() {
     cd ${OPENVSLAM_DIR}
     echo "build openvslam on `pwd`"
-    mkdir build && cd build
+    ! test -e build && mkdir build
+    cd build
     cmake \
         -DBUILD_WITH_MARCH_NATIVE=ON \
         -DUSE_PANGOLIN_VIEWER=OFF \

@@ -3,13 +3,13 @@
 source ./setup-common.sh
 
 function setup_server() {
-    $ cd ${OPENVSLAM_DIR}/viewer
-    $ npm install
+    cd ${OPENVSLAM_DIR}/viewer
+    npm install
 }
 
 function start_server() {
-    $ cd ${OPENVSLAM_DIR}/viewer
-    $ node app.js
+    cd ${OPENVSLAM_DIR}/viewer
+    node app.js
 }
 
 function start() {

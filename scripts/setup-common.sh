@@ -5,8 +5,8 @@ trap "cd ${CUR_DIR}" 2 3 4 9 15
 #set -x -u -e
 WORK_DIR=${CUR_DIR}/build
 OPENVSLAM_DIR=../openvslam
+DATA_DIR=../data/build
 ! test -e ${WORK_DIR} && mkdir ${WORK_DIR}
-
 
 function install_dbow2() {
     cd ${WORK_DIR}
@@ -80,24 +80,20 @@ function install_components() {
     components=($1)
     com=($2)
     echo "try to install component [${com}] of components: ${components[*]}"
-    r=-1
 
     for c1 in ${com}
     do
         for c2 in ${components[*]}
         do
             if [[ "$c1" == "$c2" || "$c1" == "all" ]]; then
-                r=0
                 echo "install $c2"
                 install_$c2
+                return 0
             fi
         done
     done
 
-
-    if [[ $r = -1 ]]; then
-        echo "please input the parameter: $0 ${components[*]}"
-    fi
+    echo "please input the parameter: $0 ${components[*]}"
 }
 
 function install_macos_protobuf() {
