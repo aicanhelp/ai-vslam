@@ -4,15 +4,18 @@ CUR_DIR=`pwd`
 trap "cd ${CUR_DIR}" 2 3 4 9 15
 #set -x -u -e
 WORK_DIR=${CUR_DIR}/build
-OPENVSLAM_DIR=../openvslam
-DATA_DIR=../data/build
+OPENVSLAM_DIR=${CUR_DIR}/../openvslam
+DATA_DIR=${CUR_DIR}/../data/build
 ! test -e ${WORK_DIR} && mkdir ${WORK_DIR}
 
+function make_build_dir(){
+    ! test -e build && mkdir build && cd build
+}
 function install_dbow2() {
     cd ${WORK_DIR}
     git clone https://github.com/shinsumicco/DBoW2.git
     cd DBoW2
-    mkdir build && cd build
+    make_build_dir
     cmake \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr/local \
@@ -27,7 +30,7 @@ function install_g2o() {
     git clone https://github.com/RainerKuemmerle/g2o.git
     cd g2o
     git checkout 9b41a4ea5ade8e1250b9c1b279f3a9c098811b5a
-    mkdir build && cd build
+    make_build_dir
     cmake \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr/local \
@@ -50,7 +53,7 @@ function install_PangolinView() {
     git clone https://github.com/stevenlovegrove/Pangolin.git
     cd Pangolin
     git checkout ad8b5f83222291c51b4800d5a5873b0e90a0cf81
-    mkdir build && cd build
+    make_build_dir
     cmake \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr/local \
@@ -66,7 +69,7 @@ function install_socketView() {
     cd socket.io-client-cpp
     git submodule init
     git submodule update
-    mkdir build && cd build
+    make_build_dir
     cmake \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr/local \
@@ -76,6 +79,27 @@ function install_socketView() {
     cd ..
 }
 
+function install_sophus() {
+    cd ${WORK_DIR}
+    git clone https://github.com/strasdat/Sophus.git
+    cd Sophus
+    make_build_dir
+    cmake ..
+    make -j4
+    make install
+    cd ..
+}
+
+function install_gtsam(){
+    cd ${WORK_DIR}
+    git clone https://github.com/borglab/gtsam.git
+    cd gtsam
+    make_build_dir
+    cmake ..
+    make -j4
+    make install
+    cd ..
+}
 function install_components() {
     components=($1)
     com=($2)
@@ -193,7 +217,10 @@ function install_opencv3.4() {
         ..
     make -j4
     make install
+    cd ..
 }
+
+
 
 function install_ubuntu_protobuf() {
     apt install -y libprotobuf-dev protobuf-compiler
