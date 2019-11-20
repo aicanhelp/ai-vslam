@@ -1,8 +1,7 @@
-cmake_minimum_required(VERSION 3.6)
-project(slam-projects)
+cmake_minimum_required(VERSION 3.15)
+project(ai_vslam)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
-# 引入子目录
 ADD_SUBDIRECTORY(openvslam)
-# ADD_SUBDIRECTORY(slambook)
+ADD_SUBDIRECTORY(slambook)
