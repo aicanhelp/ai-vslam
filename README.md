@@ -21,6 +21,14 @@ This is a experimental project for AI and VSLAM. Currently it's based on openvsl
     ./build-openvslam.sh
 ```
 
+### Start socket view
+```
+   cd scripts
+   ./start-socketview.sh
+```
+
+### Open socketview in browser with port 3001
+
 ### Run exmaples
 - Tracking and Mapping
 ```
