@@ -30,4 +30,4 @@ This is a experimental project for AI and VSLAM. Currently it's based on openvsl
 
 
 ### Test Data
-Some test data can be acquired from http://www.cvlibs.net/datasets/kitti/
+More test data can be acquired from http://www.cvlibs.net/datasets/kitti/
