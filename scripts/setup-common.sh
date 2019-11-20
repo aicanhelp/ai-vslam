@@ -5,8 +5,9 @@ trap "cd ${CUR_DIR}" 2 3 4 9 15
 #set -x -u -e
 WORK_DIR=${CUR_DIR}/build
 OPENVSLAM_DIR=${CUR_DIR}/../openvslam
-DATA_DIR=${CUR_DIR}/../data/build
+DATA_DIR=${CUR_DIR}/../data
 ! test -e ${WORK_DIR} && mkdir ${WORK_DIR}
+! test -e ${DATA_DIR} && mkdir ${DATA_DIR}
 
 function make_build_dir(){
     ! test -e build && mkdir build && cd build

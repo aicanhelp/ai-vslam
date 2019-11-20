@@ -27,6 +27,9 @@ This is a experimental project for AI and VSLAM. Currently it's based on openvsl
    ./start-socketview.sh
 ```
 
+### prepare data
+
+
 ### Open socketview in browser with port 3001
 
 ### Run exmaples
