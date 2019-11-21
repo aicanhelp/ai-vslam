@@ -4,3 +4,12 @@
 [submodule "slambook"]
 	path = slambook
 	url = https://github.com/aicanhelp/slambook.git
+[submodule "openMVG"]
+	path = openMVG
+	url = https://github.com/openMVG/openMVG.git
+[submodule "CMVS-PMVS"]
+	path = CMVS-PMVS
+	url = https://github.com/pmoulon/CMVS-PMVS.git
+[submodule "cube_slam"]
+	path = cube_slam
+	url = https://github.com/shichaoy/cube_slam.git
