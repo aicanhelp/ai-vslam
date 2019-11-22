@@ -13,3 +13,6 @@
 [submodule "cube_slam"]
 	path = cube_slam
 	url = https://github.com/shichaoy/cube_slam.git
+[submodule "artoolkit5"]
+	path = artoolkit5
+	url = https://github.com/artoolkit/artoolkit5.git
